@@ -3,19 +3,21 @@ import { Course } from './course';
 
 @Component({
   selector: 'app-courses-list',
-  templateUrl: './courses-list.component.html',
-  styleUrls: ['./courses-list.component.css']
+  templateUrl: './courses-list.component.html'
 })
-export class CoursesListComponent implements OnInit {
-  courses: Course[] =  [];
 
+
+export class CoursesListComponent implements OnInit {
+
+  course: Course[]=[];
+  
   ngOnInit(): void {
-    this.courses =[
+    this.course =[
     {
     id: 1,
-    name: "Java: class",
+    name: "Java: Spring-boot",
     imageUrl: "",
-    price: 36.000,
+    price: 3600.000,
     code: "XPS-8796",
     duration: 120,
     rating: 5.4,
@@ -23,9 +25,9 @@ export class CoursesListComponent implements OnInit {
     },
     {
       id: 2,
-      name: "Java: class",
+      name: "Java: Rest",
       imageUrl: "",
-      price: 36.000,
+      price: 360.000,
       code: "LPS-8796",
       duration: 80,
       rating: 3.5,
