@@ -1,1 +1,22 @@
-<h2>Courses-list works!</h2>
+<div class="container">
+<h2>Courses-list</h2>
+</div>
+<table class="table table-striped">
+<thead>
+    <th>Imagem</th>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Código</th>
+    <th>Release Date</th>
+    <th>Rating</th>
+</thead>
+<tr *ngFor="let course of course">
+    <td>{{couses.imageUrl}}</td>
+    <td>{{couses.name}}</td>
+    <td>{{couses.price}}</td>
+    <td>{{couses.code}}</td>
+    <td>{{couses.releaseDate}}</td>
+    <td>{{couses.rating}}</td>
+</tr>
+
+</table>
