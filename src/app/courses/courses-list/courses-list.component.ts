@@ -16,7 +16,7 @@ export class CoursesListComponent implements OnInit {
     {
     id: 1,
     name: "Java: Spring-boot",
-    imageUrl: "",
+    imageUrl: "/assets/images/forms.png",
     price: 3600.000,
     code: "XPS-8796",
     duration: 120,
@@ -26,7 +26,7 @@ export class CoursesListComponent implements OnInit {
     {
       id: 2,
       name: "Java: Rest",
-      imageUrl: "",
+      imageUrl: "/assets/images/cli.png",
       price: 360.000,
       code: "LPS-8796",
       duration: 80,
