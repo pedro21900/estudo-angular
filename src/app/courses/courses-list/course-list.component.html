@@ -1,6 +1,4 @@
 <div class="container">
-<h2>Courses-list</h2>
-</div>
 <table class="table table-striped">
 <thead>
     <th>Imagem</th>
@@ -9,7 +7,6 @@
     <th>Código</th>
     <th>Release Date</th>
     <th>Rating</th>
-    <th>Options</th>
 </thead>
 <tbody>
 <tr *ngFor="let course of course">
@@ -19,8 +16,9 @@
     <td>{{course.code}}</td>
     <td>{{course.releaseDate}}</td>
     <td>
-        <app-star [rating="course.rating"]></app-star>
+      <app-course-detail [rating]="course.rating"></app-course-detail>
     </td>
 </tr>
 </tbody>
 </table>
+</div>
