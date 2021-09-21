@@ -6,6 +6,8 @@ import {CommonModule} from "@angular/common";
 import {CouseDetailComponent} from "./courses-detail/couse-detail.component";
 import {FormsModule} from "@angular/forms";
 import {ReplacePipe} from "../pipe/replace-pipe";
+import {DxDataGridModule} from "devextreme-angular";
+import {DxiColumnModule, DxoEditingModule} from "devextreme-angular/ui/nested";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import {ReplacePipe} from "../pipe/replace-pipe";
     CoursePageRoutingModule,
     CommonModule,
     FormsModule,
+    DxDataGridModule,
+    DxiColumnModule,
+    DxoEditingModule,
   ],
   bootstrap: [CoursePageComponent]
 })
