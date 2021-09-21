@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Course} from "../domain/course";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,15 @@ import {Course} from "../domain/course";
 export class CourseService {
   retriveAll(): Course[] {
     return COURSES
+  }
+
+  retrieveById(id: number): Course {
+    return COURSES.filter(x=>x.id==id)[0];
+  }
+  save(course:Course):void{
+      const index=course.id;
+      COURSES[index]=course;
+
   }
 }
 
