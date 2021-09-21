@@ -10,13 +10,28 @@ import {CourseService} from "../../service/course.service";
 
 export class CourseListComponent implements OnInit {
 
-  course: Course[] = [];
+  _course: Course[] = [];
+  _filterCourse: Course[] = [];
+  _filterBy: string = '';
 
-   constructor(private courseService: CourseService) {
-   }
-  ngOnInit(): void {
-    this.course = this.courseService.retriveAll();
-
+  constructor(private courseService: CourseService) {
   }
 
+  ngOnInit(): void {
+    this._course = this.courseService.retriveAll();
+    this._filterCourse = this._course;
+  }
+
+  set filter(value: string) {
+    this._filterBy = value;
+    this._filterCourse = this._course
+      .filter((course: Course) => course.name
+        .toLocaleLowerCase()
+        .indexOf(this._filterBy
+          .toLocaleLowerCase()) > -1);
+  }
+
+  get filter() {
+    return this._filterBy;
+  }
 }
