@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {CoursePageModule} from "./courses/course-page.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
-import {NavBarPageModule} from "./core/layout/nav-bar-page.module";
+import {NavBarPageModule} from "./@core/layout/nav-bar-page.module";
 
 @NgModule({
   declarations: [

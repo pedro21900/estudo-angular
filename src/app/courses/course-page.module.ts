@@ -5,15 +5,17 @@ import {CoursePageRoutingModule} from "./course-page-routing.module";
 import {CommonModule} from "@angular/common";
 import {CouseDetailComponent} from "./courses-detail/couse-detail.component";
 import {FormsModule} from "@angular/forms";
-import {ReplacePipe} from "../pipe/replace-pipe";
+import {ReplacePipe} from "../@shared/pipe/replace-pipe";
 import {DxDataGridModule} from "devextreme-angular";
 import {DxiColumnModule, DxoEditingModule} from "devextreme-angular/ui/nested";
+import {StarComponent} from "../@shared/star/star.component";
 
 @NgModule({
   declarations: [
     CoursePageComponent,
-    CouseDetailComponent,
     CourseListComponent,
+    StarComponent,
+    CouseDetailComponent,
     ReplacePipe
   ],
   imports: [

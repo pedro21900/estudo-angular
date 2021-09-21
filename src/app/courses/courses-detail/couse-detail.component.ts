@@ -1,19 +1,14 @@
-import {Component, OnChanges, Input} from '@angular/core';
-import {Course} from "../../domain/course";
+import {Component, OnChanges, Input, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-course-detail',
   templateUrl: './course-detail.component.html',
-  styleUrls: ['course-detail.component.css']
 })
-export class CouseDetailComponent implements OnChanges {
-
-  @Input() rating: number = 0;
-
-  starWidth?: number;
-
-  ngOnChanges(): void {
-
-    this.starWidth = (this.rating * 74) / 5;
-  }
+export class CouseDetailComponent  implements  OnInit{
+couserId: string | null ="";
+constructor(private activatedRoute:ActivatedRoute) {
+}
+ngOnInit():void {
+  this.couserId=this.activatedRoute.snapshot.paramMap.get('id');
+}
 }

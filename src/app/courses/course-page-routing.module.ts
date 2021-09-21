@@ -5,13 +5,21 @@ import {CourseListComponent} from "./courses-list/course-list.component";
 import {CouseDetailComponent} from "./courses-detail/couse-detail.component";
 
 
-const routes: Routes = [{
-  path: '', component: CoursePageComponent, children: [
-    {path: '', component: CourseListComponent},
-    {path: '', component: CouseDetailComponent}
+const routes: Routes = [
+  {
+    path: '', redirectTo: 'course', pathMatch: 'full'
+  },
+  {
 
-  ]
-}];
+    path: 'course', component: CoursePageComponent, children: [
+      {path: '', component: CourseListComponent},
+      {path: '', component: CouseDetailComponent},
+      {
+        path:'course/info/:id',component:CouseDetailComponent
+      }
+
+    ]
+  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

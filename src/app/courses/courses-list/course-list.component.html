@@ -20,7 +20,10 @@
     <td>{{_course.code | replace: '-':' '}}</td>
     <td>{{_course.releaseDate | date: 'dd/MM/yyyy'}}</td>
     <td>
-      <app-course-detail [rating]="_course.rating"></app-course-detail>
+      <app-star [rating]="_course.rating"></app-star>
+    </td>
+    <td>
+      <a [routerLink]="['course/info',_course.id]" class="btn btn-primary">Edit</a>
     </td>
   </tr>
   </tbody>
