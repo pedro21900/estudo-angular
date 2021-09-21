@@ -17,7 +17,7 @@ import {NavBarPageModule} from "./core/layout/nav-bar-page.module";
     AppRoutingModule,
     CoursePageModule,
     NavBarPageModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
